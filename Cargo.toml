@@ -98,8 +98,10 @@ proptest = "1"
 proptest-derive = "0.5"
 rand = { version = "0.9", default-features = false, features = ["os_rng"] }
 rayon = { version = "1.2", default-features = false }
-ruint = { version = "1.14.0", default-features = false, features = ["alloc"] }
-ruint-macro = { version = "1", default-features = false }
+ruint = { git = "https://github.com/obliviouslabs/ouint", rev = "544d63928dc8b7e35ec4ca833ce92512b62983d3", default-features = false, features = ["alloc"], package = "rouint" }
+
+# { version = "1.14.0", default-features = false, features = ["alloc"] }
+ruint-macro = { git = "https://github.com/obliviouslabs/ouint", rev = "544d63928dc8b7e35ec4ca833ce92512b62983d3", default-features = false, package = "rouint-macro" }
 winnow = { version = "0.7", default-features = false, features = ["alloc"] }
 
 # sqlx support (optional, for DB integration)
